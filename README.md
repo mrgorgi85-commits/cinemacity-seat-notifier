@@ -26,7 +26,7 @@ The system polls Cinema City's backend API on a configurable schedule (default: 
 ## 📁 Repository Structure
 
 ```
-Odyssey/
+cinemacity-seat-notifier/
 ├── function_app.py               # Main Azure Function (Timer Trigger & Alert Dispatcher)
 ├── host.json                     # Azure Functions host configuration (v2)
 ├── requirements.txt              # Python runtime dependencies
