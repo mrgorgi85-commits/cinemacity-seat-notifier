@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "MONITOR_SCHEDULE": "0 */1 * * * *",
+    "CINEMA_ID": "1052",
+    "MOVIE_NAME": "The Odyssey",
+    "AUDITORIUM_NAME": "IMAX",
+    "TARGET_DATES": "[\"2026-08-08\", \"2026-08-09\"]",
+    "ALLOWED_SHOWTIMES": "{\"2026-08-08\": [\"16:40\", \"20:30\"], \"2026-08-09\": [\"09:00\", \"12:50\", \"16:40\"]}",
+    "MOVIE_PAGE_URL": "https://www.cinemacity.cz/films/odyssea/7268s2r#/buy-tickets-by-cinema?in-cinema={cinema_id}&at-date={date_str}",
+    "RATIO_THRESHOLD": "0.016",
+    "TELEGRAM_BOT_TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
+    "TELEGRAM_CHAT_ID": "YOUR_TELEGRAM_CHAT_ID"
+  }
+}
+

@@ -1,0 +1,17 @@
+# Azure Functions local settings (contain sensitive tokens/credentials)
+local.settings.json
+
+# Environment & Dependencies
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+
+# Deployment artifacts
+app.zip
+
+# IDE & System files
+.vscode/
+.idea/
+.DS_Store
