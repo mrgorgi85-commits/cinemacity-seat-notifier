@@ -1,0 +1,34 @@
+name: Dune 3 Flora IMAX Monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run monitor
+        env:
+          CINEMA_ID: "1052"
+          MOVIE_NAME: "Dune: Part Three"
+          AUDITORIUM_NAME: "IMAX"
+          TARGET_DATES: '["2026-12-18","2026-12-19"]'
+          ALLOWED_SHOWTIMES: "{}"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -c "import function_app; function_app.imax_ticket_monitor(None)"
